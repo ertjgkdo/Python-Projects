@@ -9,6 +9,7 @@ def start(question, answer):
         score += 1
     else:
         print("Incorrect!")
+        print("hello")
 
 question1 ="What does CPU stand for? "
 question2 ="What does ROM stand for? "
