@@ -28,18 +28,22 @@ while max(players_score)< max_score:
             should_roll = input("Would you like to roll the dice?")
             if should_roll.lower() !='y':
                 break
-            
-            play = roll()
-            if play == 1:
-                print("You rolled the die and got 1! your score is set to 0.")
-                print("Your turn is done!")
-                current_score = 0
             else:
-                print("You rolled the dice and got", play)
-                current_score += play
-            print("Youe score is", current_score)
-        players_score[each] += current_score
-        print("Your total score is", players_score[each]) 
+                play = roll()
+                if play == 1:
+                    print("You rolled the die and got 1! your score is set to 0.")
+                    print("Your turn is done!")
+                    current_score = 0
+                    break
+                elif current_score >= 50:
+                    print("Congratulations! You reached the maximum score. You win!")
+                    break
+                else:
+                    print("You rolled the dice and got", play)
+                    current_score += play
+                print("Youe score is", current_score)
+            players_score[each] += current_score
+            print("Your total score is", players_score[each]) 
 
 highest_score = max[players_score]
 winning_player = players_score.index(highest_score)
