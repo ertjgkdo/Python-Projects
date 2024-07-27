@@ -41,10 +41,10 @@ while max(players_score)< max_score:
                 else:
                     print("You rolled the dice and got", play)
                     current_score += play
-                print("Youe score is", current_score)
+                print("Your score is", current_score)
             players_score[each] += current_score
             print("Your total score is", players_score[each]) 
 
-highest_score = max[players_score]
+highest_score = max(players_score)
 winning_player = players_score.index(highest_score)
 print("Player number", winning_player+1, "is the winner of the game with score", highest_score)
