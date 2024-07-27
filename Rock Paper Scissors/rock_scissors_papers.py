@@ -9,6 +9,7 @@ while True:
     if user_pick == 'q':
         break
     if user_pick not in options:
+        print("Invalid choice! Please choose either rock, paper, or scissor.")
         continue
     random_num = random.randint(0,2)
     #0 = rock, 1 = paper, 2 = scissor
@@ -35,6 +36,8 @@ print("You won", user_wins, "times")
 print("You lost", computer_wins, "times")
 if user_wins > computer_wins:
     print("Congratulations!! You win the overall game.")
+elif user_wins== computer_wins:
+    print("Nobody won. It's a tie. Try again to win.")
 else:
     print("You lost in the overall match. Better luck next time!")
 print("Goodbye")
