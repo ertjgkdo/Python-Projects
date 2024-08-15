@@ -1,3 +1,5 @@
+
+
 name = input("Enter your name:")
 print("Hello. Welcome to this adventure game,", name, ".")
 print("Lets start the game!")
@@ -12,7 +14,7 @@ if choice == 'left':
         print("After a few steps you are met with a dead end. You lose the game.")
     else:
         print("Not a valid option. You lose")
-elif choice =='right':
+elif choice =='right':                                       
     choice = input("You see a man walking opposite you. He starts to wave at you. Type talk to strike a conversation or continue to go on your own way.")
     if choice == 'talk':
         print("You have a good conversation with the man. He is happy to have someone to talk to after so long. so he gives you a bag of gold. You win!")
