@@ -3,7 +3,8 @@ import json
 import application
 class Tracker:
     def __init__(self, filename = 'data.json'):
-        self.filename = filename
+        base_path = os.path.dirname(__file__)
+        self.filename = os.path.join(base_path, filename)
         self.applications = self.load_data()
 
     def load_data(self):
